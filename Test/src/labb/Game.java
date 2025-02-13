@@ -9,15 +9,16 @@ public class Game {
 	private Ball b;
 	private int TickCounter =0;
 	private Bat bat;
+	private int antal = 10;
 	
 
 	
 	public Game(GameBoard board) {
 	
 		squareCollection = new SquareCollection();
-	    squareCollection.generateRow(10); // Generera 10 röda rutor
+	    squareCollection.generateRow(antal); // Generera 10 röda rutor
 		
-		b =new Ball(400,400,15,15);
+		b =new Ball(board.getWidth()/2 ,board.getHeight()/2,15,15);
 		bat = new Bat(400,550, 80,20, b);	
 		}
 
@@ -38,12 +39,12 @@ public class Game {
 		 
 		
 		 b.update(keyboard);
-	     squareCollection.move(0, 1); 
+	     squareCollection.move(0, 0); 
 	     bat.update(keyboard);       
 	}
 
 	public void draw(Graphics2D graphics) {
-	//	 squareCollection.draw(graphics); // Rita alla fyrkanter
+		 squareCollection.draw(graphics); // Rita alla fyrkanter
 		 b.draw(graphics);
 		 bat.draw(graphics);
 		}

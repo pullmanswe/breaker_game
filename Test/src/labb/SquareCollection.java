@@ -13,10 +13,8 @@ public class SquareCollection {
     public void generateRow(int antal) {
     	
     		for (int i = 0; i < antal; i++) {
-              addSquare(new RedBox((80 * i)+20, 50, 40, 40));
-          //    Square redBox = new Square(Color.RED, /* andra parametrar */);
-            squares.add(RedBox);
-        }
+    			 addSquare(new RedBox((80 * i) + 20, 50, 40, 40));}
+    		
     }
 
     // Lägg till en fyrkant

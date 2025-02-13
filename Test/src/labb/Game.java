@@ -15,7 +15,7 @@ public class Game {
 	public Game(GameBoard board) {
 	
 		squareCollection = new SquareCollection();
-		SquareCollection.generateRow(10); 
+	    squareCollection.generateRow(10); // Generera 10 röda rutor
 		
 		b =new Ball(400,400,15,15);
 		bat = new Bat(400,550, 80,20, b);	

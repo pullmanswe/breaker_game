@@ -71,4 +71,10 @@ if(keyboard.isKeyDown(Key.Right))
 
 	}
 
+	public void setPosition(int i, int j) {
+		// TODO Auto-generated method stub
+		setX(i);
+		setY(j);
+	}
+
 }

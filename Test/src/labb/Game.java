@@ -10,15 +10,17 @@ public class Game {
 	private int TickCounter =0;
 	private Bat bat;
 	private int antal = 10;
+	private GameBoard board;
+	
 	
 
 	
 	public Game(GameBoard board) {
-	
+		this.board = board;
 		squareCollection = new SquareCollection();
 	    squareCollection.generateRow(antal); // Generera 10 röda rutor
 		
-		b =new Ball(board.getWidth()/2 ,board.getHeight()/2,15,15);
+		b =new Ball(0,0,15,15);
 		bat = new Bat(400,550, 80,20, b);	
 		}
 
@@ -26,7 +28,9 @@ public class Game {
 	
 	public void update(Keyboard keyboard) {
 		System.out.println(b.getX());
-		
+		  if (TickCounter == 0) {
+		        b.setPosition(board.getWidth() / 2, board.getHeight() / 2); // Sätter bollen centralt
+		    }
 		
 		TickCounter++;
 //		dx+=b.getX();

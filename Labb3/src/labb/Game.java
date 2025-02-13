@@ -13,11 +13,10 @@ public class Game {
 
 	
 	public Game(GameBoard board) {
+	
 		squareCollection = new SquareCollection();
-	//	for (int i = 0; i < 10; i++) {
-      //      squareCollection.addSquare(new RedBox((80 * i)+20, 50, 40, 40));
-        //}
-		squareCollection;
+		squareCollection.generateRedBoxes(10); 
+		
 		b =new Ball(400,400,15,15);
 		bat = new Bat(400,550, 80,20, b);	
 		}
@@ -44,7 +43,7 @@ public class Game {
 	}
 
 	public void draw(Graphics2D graphics) {
-		 squareCollection.draw(graphics); // Rita alla fyrkanter
+	//	 squareCollection.draw(graphics); // Rita alla fyrkanter
 		 b.draw(graphics);
 		 bat.draw(graphics);
 		}

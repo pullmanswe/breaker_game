@@ -9,6 +9,15 @@ public class SquareCollection {
     public SquareCollection() {
         squares = new ArrayList<>(); // Initiera listan
     }
+    
+    public generateRow(int antal) {
+    	
+    		for (int i = 0; i < antal; i++) {
+              squareCollection.addSquare(new RedBox((80 * i)+20, 50, 40, 40));
+              Square redBox = new Square(Color.RED, /* andra parametrar */);
+              squares.add(redBox);
+        }
+    }
 
     // Lägg till en fyrkant
     public void addSquare(RedBox square) {

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SquareCollection {
     private List<RedBox> squares; // Lista som håller alla fyrkanter
-    private int width = 50;
+    private int width = 350;
     private int hight = 50;
     private int padding = 20;
     private int X =80;
@@ -20,8 +20,13 @@ public class SquareCollection {
     			 addSquare(new RedBox((X * i) + padding, Y, width, hight));}
     		
     }
+    public int getX() {return X;}
+    public int getY() {return Y;}
+    public int getHeight() {return hight;}
+    public int getWidth() {return width;}
     
-    public void boxOutline() {
+    
+  /*  public void  boxOutline() {
     	int a;
     	int b;
     	int c;
@@ -30,12 +35,11 @@ public class SquareCollection {
     	b = X+width;
     	c =b+hight;
     	d= X+hight;
-    	return a, b;
+  
     	
-    	
-    //	top= squares.getX();
+  
     }
-
+*/
     // Lägg till en fyrkant
     public void addSquare(RedBox square) {
         squares.add(square);

@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 import java.util.*;
 
 public class Game {
+	private Hitbox hitbox;
 	private SquareCollection squareCollection;
 	private Ball b;
 	private int TickCounter =0;
@@ -19,7 +20,7 @@ public class Game {
 		this.board = board;
 		squareCollection = new SquareCollection();
 	    squareCollection.generateRow(antal); // Generera 10 röda rutor
-		
+		hitbox = new Hitbox();
 		b =new Ball(0,0,15,15);
 		bat = new Bat(400,550, 80,20, b);	
 		}
@@ -41,7 +42,7 @@ public class Game {
 		
 			
 		 
-		
+		//hitbox.update(keyboard);
 		 b.update(keyboard);
 	     squareCollection.move(0, 0); 
 	     bat.update(keyboard);       
